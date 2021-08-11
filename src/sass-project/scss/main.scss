@@ -1,0 +1,56 @@
+@import 'variables';
+
+@mixin errorComp($color:green) {
+  background-color: $color;
+}
+@mixin paragraphmixin {
+
+   @content;
+   color:green
+
+}
+
+@mixin google-font($font-family){
+  @import url(`googlefont#{$font-family}`);
+}
+body {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4 {
+  @include errorComp;
+}
+
+p {
+  @include paragraphmixin{
+    background-color: red;
+  }
+}
+
+a {
+
+}
+
+#header {
+color:'red';
+  #main-menu {
+    color:$text-color
+  }
+  
+  #logo {
+
+  }
+}
+
+#main {
+
+  #content {
+  }
+
+  #sidebar {
+  }
+}
+
+#footer {
+
+}
