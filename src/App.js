@@ -9,6 +9,7 @@ import { ContextComponent, CreateClassComponent } from './components/ContextComp
 import { ErrorBoundary, ErrorBoundaryComponent } from './components/ErrorBoundary'
 import { ForwardRefParentComp, ForwardRefComp, ForwardRefCompNrml } from './components/ForwardRefComp'
 import { HocFunctionComp } from './components/ForwardRefHOC'
+import { HigherOrderComponent } from './components/HocContainers/HocContainer'
 function App() {
 
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/lazy' component={LazyComponent} />
           <Route path='/ForwardRef' component={ForwardRefParentComp} />
           <Route path='/ForwardHocRef' component={HocFunctionComp} />
+          <Route path='/Hoc' component={HigherOrderComponent} />
 
           <ThemeContext.Provider value={{ theme: 'green' }}>
             <Route path='/context' component={CreateClassComponent} />
